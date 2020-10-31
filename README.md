@@ -1,4 +1,4 @@
-# cCSharp--Entity-Framework--code-first-migration-Atinder-Pal
+# CSharp--Entity-Framework--code-first-migration-Atinder-Pal
 
 **Purpose:** This practice is designed to get amiliarization with the fundamentals of using Entity Framework to generate a database.  
 This scenario is for when you would like to build your server and database both using C#. 
