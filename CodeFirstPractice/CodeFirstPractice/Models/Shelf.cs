@@ -17,5 +17,15 @@ namespace CodeFirstPractice.Models
         [Required]
         [Column( TypeName ="varchar(50)" )]
         public string Name { get; set; }
+
+        public Shelf()
+        {
+            Name = "Default_Shelf";
+        }
+
+        public Shelf( string shelfName )
+        {
+            Name = shelfName;
+        }
     }
 }
