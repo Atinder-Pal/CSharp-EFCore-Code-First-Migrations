@@ -1,6 +1,7 @@
 ﻿using CodeFirstPractice.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Linq;
 
 namespace CodeFirstPractice
 {
@@ -16,8 +17,16 @@ namespace CodeFirstPractice
             {
                 try
                 {
-                    addShelf(input, context);
-                    Console.WriteLine("Shelf successully added.");
+                    //Only add if shelf name doesnot exist in the DB
+                    if (context.Shelves.Where(shelf => shelf.Name.ToLower() == input.ToLower()) == null)
+                    {
+                        addShelf(input, context);
+                        Console.WriteLine("Shelf successully added.");
+                    }
+                    else
+                    {
+                        Console.WriteLine( "Shelf Name already exists. Please try a new name." );
+                    }
                 }
                 catch
                 {
