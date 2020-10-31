@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CodeFirstPractice.Models
 {
-    [Table(nameof(Shelf))]
+    [Table("Shelf")]
     class Shelf
     {
         [Key]
@@ -14,6 +14,7 @@ namespace CodeFirstPractice.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
+        [Required]
         [Column( TypeName ="varchar(50)" )]
         public string Name { get; set; }
     }
